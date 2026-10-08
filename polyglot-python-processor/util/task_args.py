@@ -13,8 +13,7 @@ def get_cmd_arg(name):
 
     if name in d:
         return d[name][0]
-    else:
-        print('Unknown command line arg requested: {}'.format(name))
+    return None
 
 def get_env_var(name):
     if name in os.environ:
