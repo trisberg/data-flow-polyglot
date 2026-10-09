@@ -1,1 +1,1 @@
-worker: python python_processor.py
+worker: python python_task.py
