@@ -3,7 +3,7 @@
 import pika
 
 from util.http_status_server import HttpHealthServer
-from util.task_args import (
+from util.app_args import (
     get_rabbitmq_connection_params,
     get_input_channel,
     get_input_group,
