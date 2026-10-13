@@ -94,17 +94,11 @@ class Router:
     def is_even_timestamp(value):
         return int(value[-1:]) % 2 == 0
 
-
-def main():
-    Router(
-        get_env_info(),
-        get_rabbitmq_settings(),
-        get_channel_destination('input'),
-        get_channel_destination('even'),
-        get_channel_destination('odd'),
-        get_channel_group('input', 'python-router'),
-    ).process_timestamps()
-
-
-if __name__ == '__main__':
-    main()
+Router(
+    get_env_info(),
+    get_rabbitmq_settings(),
+    get_channel_destination('input'),
+    get_channel_destination('even'),
+    get_channel_destination('odd'),
+    get_channel_group('input', 'python-router'),
+).process_timestamps()
